@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Snake Game</title>
+</head>
+
+<body>
+    <div class="container ">
+        <div class="score">
+            <div class="popUp-box">
+                <div class="element">
+                    <label for="D">Default</label>
+                    <input type="checkbox" id="D">
+                </div>
+
+                <div class="element">
+                    <label for="">Playboard BG</label>
+                    <input type="color" id="B">
+                </div>
+
+                <div class="element">
+                    <label for="S">Scoring BG</label>
+                    <input type="color" id="S">
+                </div>
+
+                <div class="element">
+                    <label for="SN">Snake Color</label>
+                    <input type="color" id="SN">
+                </div>
+                <div class="element">
+                    <label for="F">Food Color</label>
+                    <input type="color" id="F">
+                </div>
+                <div class="element">
+                    <select name="" id="sel">
+                        <option disabled>Choose Speed</option>
+                        <option value="90">High</option>
+                        <option value="150">Low</option>
+                        <option value="110" selected>Medium</option>
+                    </select>
+                </div>
+
+                <div class="change" onclick="save()">
+                    <span>Save Changes</span>
+                </div>
+            </div>
+
+
+            <span id="sc">Score is : 0</span>
+            <span id="high">High Score is : 50</span>
+            <i class="fa fa-gear" id="s" style="cursor: pointer;"></i>
+        </div>
+        <div class="game-board"></div>
+
+        <div class="control">
+            <i data-key="ArrowLeft" class="fa-solid fa-arrow-left-long r " value="abcdefgh"></i>
+            <i data-key="ArrowUp" class="fa-solid fa-arrow-up-long r"></i>
+            <i data-key="ArrowRight" class="fa-solid fa-arrow-right-long r"></i>
+            <i data-key="ArrowDown" class="fa-solid fa-arrow-down-long r"></i>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

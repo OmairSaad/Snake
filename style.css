@@ -1,0 +1,139 @@
+
+   @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    font-size: 13px;
+}
+body{
+    background-color: #B6BBC4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    width: 68vmin;
+    height: 70vmin;
+    background-color: #31304D;
+    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
+    /* border-radius:5px; */
+}
+.score{
+    margin-top: 10px;
+    font-size: 1rem;
+    padding: 20px 30px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    position: relative;
+    /* border-radius: 5px; */
+}
+.game-board{
+    width: 100%;
+    height: 100%;
+    background-color: #0e2149;
+    display: grid;
+    grid-template: repeat(30, 2fr)/repeat(30, 1fr);
+    /* border-radius: 5px; */
+}
+
+/* Contorl for if screen size is small use media qurey to display again flex for control */
+.control{
+    display: none;        
+    color: #FFD28F;
+}
+.control i{
+    padding: 15px 0px;
+    width: calc(100%/4);
+    border-right: 1px solid black;
+    text-align: center;
+    cursor: pointer;
+}
+@media screen and (max-width: 800px) {
+.container{
+    width: 90vmin;;
+    height: 115vmin;
+}
+.control{
+    display: flex;
+}
+.score{
+    font-size: .9rem;
+    padding: 15px 25px;
+}
+.control i{
+    padding: 1rem;
+    font-size: 1rem;
+}
+}
+/* Setting */
+.popUp-box{
+    width: 200px;
+    height: 370px;
+    position: absolute;
+    background-color: rgb(11, 121, 148);
+    left: 20px;
+    top: 0;
+    border-radius: 5px;
+    display: none;
+    padding: 5px;
+    transition: 5s ease-in-out all;
+}
+.hurr{
+    display: block;
+}
+.element{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin:20px 5px;
+}
+.element input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+}
+.change{
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+    background-color: #0e8e8e;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    color: lawngreen;
+}
+select{
+    width: 100%;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 5px;
+    background-color:black;
+    text-align: center;
+    /* -webkit-appearance: none; */
+    color:white;
+}
+
+/* food */
+.game-board .food{
+    width: 10px;
+    height: 10px;
+    background-color: #ff0015;
+    border-radius: 50%;
+    
+}
+.game-board .head{
+    width: 10px;
+    height: 10px;
+    background-color: #00fffb;
+    border-radius: 50%;
+}
+
+.l{
+    border: 1px solid red;
+}
